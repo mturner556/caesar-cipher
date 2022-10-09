@@ -5,6 +5,7 @@ shift_factor = gets.lstrip.rstrip.to_i
 
 def caeser_cipher(str, shift_num)
     lower_case_alphabet = "abcdefghijklmnopqrstuvwxyz"
+    upper_case_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     cipher_return_str = ""
 
@@ -18,6 +19,13 @@ def caeser_cipher(str, shift_num)
                 cipher_return_str += lower_case_alphabet[-1 + (shift_num - difference)]
             else
                 cipher_return_str += lower_case_alphabet[lower_case_alphabet.index(c) + shift_num]
+            end
+        elsif upper_case_alphabet.include?(c)
+            if upper_case_alphabet.index(c) + shift_num > upper_case_alphabet.index("Z")
+                difference = upper_case_alphabet.index("Z") - upper_case_alphabet.index(c)
+                cipher_return_str += upper_case_alphabet[-1 + (shift_num - difference)]
+            else
+                cipher_return_str += upper_case_alphabet[upper_case_alphabet.index(c) + shift_num]
             end
         else
             cipher_return_str += c
