@@ -1,2 +1,2 @@
-# caeser-cipher
-A caeser cipher built in Ruby.
+# caesar-cipher
+A caesar cipher built in Ruby.
