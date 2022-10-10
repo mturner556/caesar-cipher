@@ -3,7 +3,7 @@ test_str = gets.lstrip.rstrip
 p "Input a number to shift:"
 shift_factor = gets.lstrip.rstrip.to_i
 
-def caeser_cipher(str, shift_num)
+def caesar_cipher(str, shift_num)
     lower_case_alphabet = "abcdefghijklmnopqrstuvwxyz"
     upper_case_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -35,4 +35,4 @@ def caeser_cipher(str, shift_num)
     p cipher_return_str
 end
 
-caeser_cipher(test_str, shift_factor)
+caesar_cipher(test_str, shift_factor)
